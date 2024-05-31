@@ -16,7 +16,10 @@ export default function Home() {
       </div>
     );
   }
-  return (<div>Logged In {session.user.email}  <button onClick={() => signOut()}>Sign out</button> </div>
-
-);
+  return (
+    <div>
+      Logged In {session.user.email}{' '}
+      <button  className="bg-red-600" onClick={() => signOut()}>Sign out</button>{' '}
+    </div>
+  );
 }
