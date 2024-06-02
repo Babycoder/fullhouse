@@ -1,8 +1,14 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function Nav() {
+  const inactiveLink = 'flex gap-2 p-1';
+  const activeLink = inactiveLink + ' bg-white rounded-l-lg';
+  const router = useRouter();
+  const { pathname } = router;
+
   return (
-    <aside className="p-4">
-      <Link href={'/'} className="flex gap-2 mb-4">
+    <aside className="p-4 pr-0">
+      <Link href={'/'} className="flex gap-2 mb-4 mr-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -19,8 +25,11 @@ export default function Nav() {
         </svg>
         <span className="">FullHouse-Admin </span>
       </Link>
-      <nav className='flex flex-col gap-2'>
-        <Link href={'/'} className=" flex gap-2">
+      <nav className="flex flex-col gap-2">
+        <Link
+          href={'/'}
+          className={pathname === '/' ? activeLink : inactiveLink}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,7 +46,10 @@ export default function Nav() {
           </svg>
           <span>Dashboard</span>
         </Link>
-        <Link href={'/'} className="flex gap-2">
+        <Link
+          href={'/products'}
+          className={pathname === '/products' ? activeLink : inactiveLink}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -55,7 +67,10 @@ export default function Nav() {
 
           <span>Products</span>
         </Link>{' '}
-        <Link href={'/'} className="flex gap-2">
+        <Link
+          href={'/orders'}
+          className={pathname === '/orders' ? activeLink : inactiveLink}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -73,7 +88,10 @@ export default function Nav() {
 
           <span>Orders</span>
         </Link>{' '}
-        <Link href={'/'} className="flex gap-2">
+        <Link
+          href={'/settings'}
+          className={pathname === '/settings' ? activeLink : inactiveLink}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
