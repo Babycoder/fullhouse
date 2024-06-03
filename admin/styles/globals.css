@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+input, textarea {
+  @apply border-2 rounded-md px-2 w-full mb-2;
+}
+
+.btn-primary{
+  @apply mt-4 bg-green-300 px-8 py-1 rounded-md text-lg;
+}
+
+/* input:focus, textarea:focus {
+  @apply border-red-900;
+} */
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,7 +28,7 @@
   }
 } */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -30,4 +42,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

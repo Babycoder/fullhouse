@@ -8,7 +8,7 @@ export default function Nav() {
 
   return (
     <aside className="p-4 pr-0">
-      <Link href={'/'} className="flex gap-2 mb-4 mr-2">
+      <Link href={'/'} className="flex gap-2 mb-4 mr-2 w-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -48,7 +48,7 @@ export default function Nav() {
         </Link>
         <Link
           href={'/products'}
-          className={pathname === '/products' ? activeLink : inactiveLink}
+          className={pathname.includes('/products') ? activeLink : inactiveLink}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ export default function Nav() {
         </Link>{' '}
         <Link
           href={'/orders'}
-          className={pathname === '/orders' ? activeLink : inactiveLink}
+          className={pathname.includes('/orders') ? activeLink : inactiveLink}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ export default function Nav() {
         </Link>{' '}
         <Link
           href={'/settings'}
-          className={pathname === '/settings' ? activeLink : inactiveLink}
+          className={pathname.includes('/settings') ? activeLink : inactiveLink}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
