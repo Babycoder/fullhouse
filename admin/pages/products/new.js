@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function NewProduct() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState('');
   const createProduct = async (e) => {
     e.preventDefault();
     const data = { title, description, price };
