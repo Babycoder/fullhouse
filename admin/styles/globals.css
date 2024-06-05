@@ -10,6 +10,17 @@ input, textarea {
   @apply mt-4 bg-green-300 px-8 py-1 rounded-md text-lg;
 }
 
+table.basic {
+  @apply w-full 
+}
+
+thead
+{
+  @apply bg-blue-200
+}
+table.basic, tr, td {
+  @apply border border-gray-300 p-1
+}
 /* input:focus, textarea:focus {
   @apply border-red-900;
 } */
